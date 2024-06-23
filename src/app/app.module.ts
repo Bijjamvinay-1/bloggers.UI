@@ -23,7 +23,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration()    
   ],
   bootstrap: [AppComponent]
 })
