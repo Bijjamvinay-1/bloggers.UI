@@ -8,13 +8,15 @@ import { CategoryListComponent } from './featuers/category/category-list/categor
 import { AddCategoryComponent } from './featuers/category/add-category/add-category.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { EditCategoryComponent } from './featuers/category/edit-category/edit-category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CategoryListComponent,
-    AddCategoryComponent
+    AddCategoryComponent,
+    EditCategoryComponent
   ],
   imports: [
     BrowserModule,
