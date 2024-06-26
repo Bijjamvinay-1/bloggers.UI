@@ -23,7 +23,13 @@
             <td>{{category.name}}</td>
             <td>{{category.urlHandle}}</td>
             <td>
-              <a class="btn btn-light" [routerLink]="['/admin/categories', category.id]" class="">Edit</a>
+               <div class="text-lg-center">
+              <div class="">Edit
+                <button mat-icon-button aria-label [routerLink]="['/admin/categories', category.id]">
+                  <mat-icon>open_in_new c</mat-icon>
+                </button>
+            </div>
+          </div>
             </td>
           </tr>
         </tbody>
