@@ -28,8 +28,8 @@ import { MaterialModule } from './material/material.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
     
   ],
   providers: [
