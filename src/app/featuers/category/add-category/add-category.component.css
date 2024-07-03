@@ -1,0 +1,9 @@
+
+
+.mat-form-field {
+    width: 100%; /* Make the form fields fill the container width */
+  }
+
+  .custom-width1 {
+    width: 300px; /* Adjust the width as per your design requirements */
+  }
