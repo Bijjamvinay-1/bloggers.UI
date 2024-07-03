@@ -14,7 +14,8 @@ import { MatTableDataSource } from '@angular/material/table';
 export class CategoryListComponent implements OnInit {
   categories$?: Observable<Category[]>;
   dataSource: MatTableDataSource<Category>;
-  displayedColumns: string[] = ['id', 'name', 'urlHandle', 'edit']; // Columns to display in mat-table
+  displayedColumns: string[] = ['id', 'name', 'urlHandle','createdDate','edit']; // Columns to display in mat-table
+ 
 
 
   constructor(private categoryService: CategoryService) {
@@ -26,8 +27,11 @@ export class CategoryListComponent implements OnInit {
   ngOnInit(): void {
     this.categories$ = this.categoryService.getAllCategories();
     this.categories$.subscribe(categories => {
+      // Sort categories in descending order by date 
+      categories.sort((a, b) => new Date(b.createdDate).getTime() - new Date(a.createdDate).getTime());
       this.dataSource.data = categories; // Assign data to MatTableDataSource
     });
   }
+  
   
 }

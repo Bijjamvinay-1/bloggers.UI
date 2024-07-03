@@ -1,5 +1,6 @@
 export interface Category {
-    id: string;
-    name: string;
-    urlHandle: string;
-  }
+  id: string;
+  name: string;
+  urlHandle: string;
+  createdDate: Date;
+}
