@@ -28,3 +28,22 @@
     background-color: #78909c; /* Lighter blue-gray */
     color: #fff; /* White text */
   }
+  /* table {
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  th, td {
+    overflow: hidden;
+    width: 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+  } */
+
+  .sticky-column {
+    position: sticky;
+    right: 0;
+    z-index: 1;
+  }
+  

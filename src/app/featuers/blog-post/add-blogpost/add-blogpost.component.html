@@ -1,71 +1,132 @@
 <div class="container">
-    <h5 class="mt-3">Add BlogPost</h5>
-    <div class="d-flex justify-content-end mt-3">
-      <!-- <a [routerLink]="['/admin/blogposts']" class="btn btn-primary" type="submit">Go Back</a> -->
-      <a mat-flat-button [routerLink]="['/admin/blogposts']" >Back</a>
-    </div>
-  
-    <form #form="ngForm" (ngSubmit)="onFormSubmit()">
-      <div class="mt-2 mb-5">
-        <div class="mt-1">
-          <mat-form-field  class="mat-form-field">
-            <mat-label>Title</mat-label>
-            <input matInput type="text" id="title" name="title" [(ngModel)]="model.title">
-          </mat-form-field>
-        </div>
-  
-        <div >
-          <mat-form-field  class="mat-form-field">
-            <mat-label>Url Handle</mat-label>
-            <input matInput type="text" id="urlHandle" name="urlHandle" [(ngModel)]="model.urlHandle">
-          </mat-form-field>
-        </div>
-  
-        <div>
-          <mat-form-field  class="mat-form-field">
-            <mat-label>Short Description</mat-label>
-            <input matInput type="text" id="shortDescription" name="shortDescription" [(ngModel)]="model.shortDescription">
-          </mat-form-field>
-        </div>
-  
-        <div >
-          <mat-form-field  class="mat-form-field">
-            <mat-label>Content</mat-label>
-            <textarea matInput id="content" name="content" [(ngModel)]="model.content"></textarea>
-          </mat-form-field>
-  
-        </div>
-  
-        <div >
-          <mat-form-field  class="mat-form-field">
-            <mat-label>Featured Image Url</mat-label>
-            <input matInput type="text" id="featuredImageUrl" name="featuredImageUrl" [(ngModel)]="model.featuredImageUrl">
-          </mat-form-field>
-        </div>
-  
-        <div >
-          <mat-form-field  class="mat-form-field">
-            <mat-label>Published Date</mat-label>
-            <input matInput type="date" id="publishedDate" name="publishedDate" [(ngModel)]="model.publishedDate" [ngModel]="model.publishedDate | date: 'yyyy-MM-dd'" (ngModelChange)="model.publishedDate = $event">
-          </mat-form-field>
-        </div>
-  
-        <div >
-          <mat-form-field  class="mat-form-field">
-            <mat-label>Author</mat-label>
-            <input matInput type="text" id="author" name="author" [(ngModel)]="model.author">
-          </mat-form-field>
-        </div>
-  
-        <div class="form-check mt-1">
-          <mat-checkbox  id="isVisible" name="isVisible">
-            Is Visible?
-          </mat-checkbox>
-        </div>
-        <div >
-          <!-- <button type="submit" class="btn btn-primary">Save</button> -->
-          <button mat-flat-button>Save</button>
-        </div>
-      </div>
-    </form>
+  <h5 class="mt-3">Add BlogPost</h5>
+  <div class="d-flex justify-content-end mt-3">
+    <a mat-flat-button [routerLink]="['/admin/blogposts']">Back</a>
   </div>
+
+  <form #form="ngForm" (ngSubmit)="onFormSubmit()" novalidate>
+    <div class="mt-2 mb-5">
+      <div class="mt-1">
+        <mat-form-field class="mat-form-field" appearance="fill">
+          <mat-label>Title</mat-label>
+          <input 
+          matInput 
+          type="text" 
+          id="title" 
+          name="title" 
+          [(ngModel)]="model.title" 
+          required>
+          <mat-error *ngIf="form.controls['title'].invalid && (form.controls['title'].dirty || form.controls['title'].touched)">
+            Title is required.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="mt-1">
+        <mat-form-field class="mat-form-field" appearance="fill">
+          <mat-label>Url Handle</mat-label>
+          <input 
+          matInput 
+          type="text" 
+          id="urlHandle" 
+          name="urlHandle" 
+          [(ngModel)]="model.urlHandle" 
+          required>
+          <mat-error *ngIf="form.controls['urlHandle'].invalid && (form.controls['urlHandle'].dirty || form.controls['urlHandle'].touched)">
+            Url Handle is required.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="mt-1">
+        <mat-form-field class="mat-form-field" appearance="fill">
+          <mat-label>Short Description</mat-label>
+          <input
+           matInput 
+           type="text" 
+           id="shortDescription" 
+           name="shortDescription" 
+           [(ngModel)]="model.shortDescription" 
+           required>
+          <mat-error *ngIf="form.controls['shortDescription'].invalid && (form.controls['shortDescription'].dirty || form.controls['shortDescription'].touched)">
+            Short Description is required.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="mt-1">
+        <mat-form-field class="mat-form-field" appearance="fill">
+          <mat-label>Content</mat-label>
+          <textarea 
+          matInput 
+          id="content" 
+          name="content" 
+          [(ngModel)]="model.content" 
+          required
+          ></textarea>
+          <mat-error *ngIf="form.controls['content'].invalid && (form.controls['content'].dirty || form.controls['content'].touched)">
+            Content is required.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="mt-1">
+        <mat-form-field class="mat-form-field" appearance="fill">
+          <mat-label>Featured Image Url</mat-label>
+          <input 
+          matInput 
+          type="text" 
+          id="featuredImageUrl" 
+          name="featuredImageUrl"
+           [(ngModel)]="model.featuredImageUrl" 
+           required>
+          <mat-error *ngIf="form.controls['featuredImageUrl'].invalid && (form.controls['featuredImageUrl'].dirty || form.controls['featuredImageUrl'].touched)">
+            Featured Image Url is required.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="mt-1">
+        <mat-form-field class="mat-form-field" appearance="fill">
+          <mat-label>Published Date</mat-label>
+          <input 
+          matInput 
+          type="date" 
+          id="publishedDate" 
+          name="publishedDate" 
+          [(ngModel)]="model.publishedDate" 
+          required>
+          <mat-error *ngIf="form.controls['publishedDate'].invalid && (form.controls['publishedDate'].dirty || form.controls['publishedDate'].touched)">
+            Published Date is required.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="mt-1">
+        <mat-form-field class="mat-form-field" appearance="fill">
+          <mat-label>Author</mat-label>
+          <input 
+          matInput 
+          type="text" 
+          id="author" 
+          name="author" 
+          [(ngModel)]="model.author" 
+          required>
+          <mat-error *ngIf="form.controls['author'].invalid && (form.controls['author'].dirty || form.controls['author'].touched)">
+            Author is required.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-check mt-1">
+        <mat-checkbox id="isVisible" name="isVisible" [(ngModel)]="model.isVisible">
+          Is Visible?
+        </mat-checkbox>
+      </div>
+
+      <div class="mt-3">
+        <button mat-flat-button color="primary" type="submit" [disabled]="form.invalid">Save</button>
+      </div>
+    </div>
+  </form>
+</div>

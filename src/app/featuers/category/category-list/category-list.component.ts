@@ -14,7 +14,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class CategoryListComponent implements OnInit {
   categories$?: Observable<Category[]>;
   dataSource: MatTableDataSource<Category>;
-  displayedColumns: string[] = ['id', 'name', 'urlHandle','createdDate','edit']; // Columns to display in mat-table
+  displayedColumns: string[] = ['id', 'name', 'urlHandle','edit']; // Columns to display in mat-table
  
 
 
