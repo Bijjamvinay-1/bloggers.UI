@@ -15,17 +15,7 @@
     margin-bottom: 10px;
   }
 
-  /* Button styling */
-  .mat-flat-button {
-    background-color: #007bff;
-    color: #fff;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-  }
+
   /* Table header background */
   .mat-table th {
     background-color: #34495e; /* Dark blue-gray */
