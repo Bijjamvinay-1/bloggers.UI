@@ -1,13 +1,6 @@
 /* * /----------------------------------------- table------------------------------------------------------- */ */
   /* Container styling */
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
+  */
 
   /* Heading styling */
   h5 {
@@ -28,10 +21,7 @@
     background-color: #78909c; /* Lighter blue-gray */
     color: #fff; /* White text */
   }
-  /* table {
-    width: 100%;
-    table-layout: fixed;
-  }
+  
   
   th, td {
     overflow: hidden;
@@ -39,11 +29,35 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     
-  } */
+  } 
+  
 
+  .custom-table-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .table-header {
+    flex: 0 0 auto;
+  }
+  
+  .table-body {
+    flex: 1 1 auto;
+    overflow-y: auto;
+  }
+  
+  .table-paginator {
+    flex: 0 0 auto;
+  }
+  
   .sticky-column {
     position: sticky;
     right: 0;
     z-index: 1;
+  }
+  
+  .text-end {
+    text-align: end;
   }
   
