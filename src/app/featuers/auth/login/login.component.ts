@@ -4,20 +4,19 @@ import { LoginRequest } from '../models/login-request.model';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
   model: LoginRequest;
   
   constructor(){
-    this.model={
+    this.model = {
       email: '',
       password: ''
     };
   }
 
-
-  onFormSubmit():void{
-    console.log(this.model)
+  onFormSubmit(): void {
+    console.log(this.model);
   }
 }

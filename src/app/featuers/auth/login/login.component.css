@@ -1,6 +1,6 @@
 
 
-mat-card {
+/* mat-card {
     max-width: 400px;
     margin: 2em auto;
     padding: 2em;
@@ -8,4 +8,67 @@ mat-card {
   
   mat-form-field {
     width: 100%;
+  } */
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background: linear-gradient(to bottom, #6a11cb, #2575fc);
   }
+  
+  .login-card {
+    width: 300px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-header {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .profile-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .profile-icon::before,
+  .profile-icon::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+  }
+  
+  .profile-icon::before {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 10px;
+    left: 20px;
+  }
+  
+  .profile-icon::after {
+    width: 60px;
+    height: 20px;
+    border-radius: 10px / 10px;
+    top: 50px;
+    left: 10px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  button[mat-raised-button] {
+    margin-top: 20px;
+    color: #310fdf;
+  }
+  
