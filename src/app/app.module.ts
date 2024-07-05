@@ -12,6 +12,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { BlogpostListComponent } from './featuers/blog-post/blogpost-list/blogpost-list.component';
 import { AddBlogpostComponent } from './featuers/blog-post/add-blogpost/add-blogpost.component';
 import { MaterialModule } from './material/material.module';
+import { LoginComponent } from './featuers/auth/login/login.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MaterialModule } from './material/material.module';
     AddCategoryComponent,
     EditCategoryComponent,
     BlogpostListComponent,
-    AddBlogpostComponent
+    AddBlogpostComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

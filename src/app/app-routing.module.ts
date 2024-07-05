@@ -5,6 +5,7 @@ import { AddCategoryComponent } from './featuers/category/add-category/add-categ
 import { EditCategoryComponent } from './featuers/category/edit-category/edit-category.component';
 import { BlogpostListComponent } from './featuers/blog-post/blogpost-list/blogpost-list.component';
 import { AddBlogpostComponent } from './featuers/blog-post/add-blogpost/add-blogpost.component';
+import { LoginComponent } from './featuers/auth/login/login.component';
 
 
   const routes: Routes = [
@@ -27,6 +28,10 @@ import { AddBlogpostComponent } from './featuers/blog-post/add-blogpost/add-blog
     {
       path:'admin/blogposts/add',
       component: AddBlogpostComponent
+    },
+    {
+      path:'login',
+      component: LoginComponent
     }
 
 ];
