@@ -86,7 +86,7 @@
         </mat-form-field>
       </div>
 
-      <div class="mt-1">
+      <!-- <div class="mt-1">
         <mat-form-field class="mat-form-field" appearance="fill">
           <mat-label>Published Date</mat-label>
           <input 
@@ -100,7 +100,21 @@
             Published Date is required.
           </mat-error>
         </mat-form-field>
+      </div> -->
+      <div class="mt-1">
+        <mat-form-field class="mat-form-field" appearance="fill">
+          <mat-label>Published Date</mat-label>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date" id="publishedDate"
+            name="publishedDate" [(ngModel)]="model.publishedDate" required>
+            <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="form.controls['publishedDate'].invalid && (form.controls['publishedDate'].dirty || form.controls['publishedDate'].touched)">
+            Published Date is required.
+          </mat-error>
+        </mat-form-field>
       </div>
+      
 
       <div class="mt-1">
         <mat-form-field class="mat-form-field" appearance="fill">

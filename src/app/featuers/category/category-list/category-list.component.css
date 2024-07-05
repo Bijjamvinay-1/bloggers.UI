@@ -1,63 +1,70 @@
-/* * /----------------------------------------- table------------------------------------------------------- */ */
-  /* Container styling */
-  */
+/* Container styling */
 
-  /* Heading styling */
-  h5 {
-    color: #333;
-    margin-bottom: 10px;
-  }
+/* Heading styling */
+h5 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Table header background */
+.mat-table th {
+  background-color: #34495e; /* Dark blue-gray */
+  color: #fff; /* White text */
+}
+
+/* Table row background */
+.mat-table tr:nth-child(even) {
+  background-color: #78909c; /* Lighter blue-gray */
+  color: #fff; /* White text */
+}
+
+th, td {
+  overflow: hidden;
+  width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.custom-table-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.table-header {
+  flex: 0 0 auto;
+}
+
+.table-body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+.table-paginator {
+  flex: 0 0 auto;
+}
+
+.sticky-column {
+  position: sticky;
+  right: 0;
+  z-index: 1;
+}
+
+.text-end {
+  text-align: end;
+}
 
 
-  /* Table header background */
-  .mat-table th {
-    background-color: #34495e; /* Dark blue-gray */
-    color: #fff; /* White text */
-  }
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: currentColor;
+  background-color: lightblue;
+}
 
-
-  /* Table row background */
-  .mat-table tr:nth-child(even) {
-    background-color: #78909c; /* Lighter blue-gray */
-    color: #fff; /* White text */
-  }
-  
-  
-  th, td {
-    overflow: hidden;
-    width: 200px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    
-  } 
-  
-
-  .custom-table-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  .table-header {
-    flex: 0 0 auto;
-  }
-  
-  .table-body {
-    flex: 1 1 auto;
-    overflow-y: auto;
-  }
-  
-  .table-paginator {
-    flex: 0 0 auto;
-  }
-  
-  .sticky-column {
-    position: sticky;
-    right: 0;
-    z-index: 1;
-  }
-  
-  .text-end {
-    text-align: end;
-  }
-  
+.mat-mdc-cell{
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  position: relative;
+}
