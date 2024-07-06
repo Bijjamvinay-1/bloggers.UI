@@ -5,29 +5,35 @@ import { AddCategoryComponent } from './featuers/category/add-category/add-categ
 import { EditCategoryComponent } from './featuers/category/edit-category/edit-category.component';
 import { BlogpostListComponent } from './featuers/blog-post/blogpost-list/blogpost-list.component';
 import { AddBlogpostComponent } from './featuers/blog-post/add-blogpost/add-blogpost.component';
-import { LoginComponent } from './featuers/auth/login/login.component';
+import {LoginComponent} from './featuers/auth/login/login.component'
+import { authGuard } from './featuers/auth/gaurds/auth.guard';
 
 
   const routes: Routes = [
     {
       path: 'admin/categories',
-      component: CategoryListComponent
+      component: CategoryListComponent,
+      canActivate: [authGuard]
     },
     {
       path: 'admin/categories/add',
-      component: AddCategoryComponent
+      component: AddCategoryComponent,
+      canActivate: [authGuard]
     },
     {
       path: 'admin/categories/:id',
-      component: EditCategoryComponent
+      component: EditCategoryComponent,
+      canActivate: [authGuard]
     },
     {
       path: 'admin/blogposts',
-      component: BlogpostListComponent
+      component: BlogpostListComponent,
+      canActivate: [authGuard]
     },
     {
       path:'admin/blogposts/add',
-      component: AddBlogpostComponent
+      component: AddBlogpostComponent,
+      canActivate: [authGuard]
     },
     {
       path:'login',
